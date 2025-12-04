@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="rootPane" styleClass="rootPane" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ndominkiewicz.dfa.controller.MainController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="15.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="85.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="75.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="309.0" prefWidth="200.0" spacing="30.0" styleClass="entry-root">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <children>
+                        <TextField fx:id="delayInput" prefHeight="41.0" promptText="Podaj opóźnienie" styleClass="entry-text-field" />
+                        <TextField fx:id="wordInput" prefHeight="41.0" promptText="Podaj słowo" styleClass="entry-text-field" VBox.vgrow="NEVER" />
+                        <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStartButton" styleClass="entry-start-button" text="Run" />
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+            <AnchorPane fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" styleClass="automatPane">
+               <children>
+                  <ImageView fx:id="resultDisplay" fitHeight="90.0" fitWidth="90.0" layoutX="796.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox fx:id="lettersDisplay" alignment="CENTER" layoutX="50.0" layoutY="21.0" maxWidth="800.0" minWidth="200.0" prefHeight="80.0" styleClass="letters-display" />
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label styleClass="exerciseLabel" text="Automat deterministyczny nad alfabetem {x, y, z} akceptujący słowa składające się z parzystej liczby samoglosek i  nieparzystej liczby spółgłosek oraz rozpoczynające się na literę 'y'." wrapText="true" />
+         </children>
+      </FlowPane>
+   </children>
+</GridPane>

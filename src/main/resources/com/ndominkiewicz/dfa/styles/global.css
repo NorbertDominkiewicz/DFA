@@ -1,0 +1,63 @@
+.rootPane {
+    -fx-background-color: #eeeded;
+    -fx-pref-width: 1200;
+    -fx-pref-height: 900;
+    -fx-font-family: "Courier New";
+}
+
+.automatPane {
+
+}
+
+.entry-root {
+    -fx-background-color: #d2e3fc;
+    -fx-background-radius: 24px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 24px;
+}
+
+.entry-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+    -fx-font-family: Calibri;
+    -fx-font-weight: 800;
+}
+
+.entry-text-field {
+    -fx-pref-width: 150px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.entry-start-button {
+    -fx-padding: 5 12;
+    -fx-font-size: 16px;
+    -fx-background-color: #3486eb;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.entry-start-button:hover {
+    -fx-background-color: #1b72d1;
+}
+
+.letters-display {
+    -fx-background-color: white;
+    -fx-padding: 4 10;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: black;
+    -fx-spacing: 10;
+    -fx-font-size: 20px;
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+}
+
+.exerciseLabel {
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-pref-width: 800px;
+    -fx-font-weight: 900;
+}

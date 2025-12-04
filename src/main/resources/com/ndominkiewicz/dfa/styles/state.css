@@ -1,0 +1,15 @@
+.root {
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.char {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-style: opaque;
+    -fx-font-family: monospace;
+}
